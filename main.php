@@ -5,9 +5,15 @@ $db = mysqli_connect("localhost", "Zordon", "Zordon123!", "clicker");
 $sql = "SELECT username FROM users WHERE username = '$username' && password = '$password'";
 $clicks = "0";
 $result = $db->query($sql);
+	
+if ((!isset($_POST['username'])) || (!isset($_POST['pass'])))
+{
+  header('Location: index.php');
+  exit();
+}
 
 if($result->num_rows > 0) {
-    
+    session_start();
     $conn = new mysqli("localhost", "Zordon", "Zordon123!", "Clicker");
     // Check connection
     if ($conn->connect_error) {
@@ -24,6 +30,9 @@ if($result->num_rows > 0) {
     echo "<b><p align='center'>Username: " . $row["username"]."<b>";
     echo "</p>";
     echo "<b><p align='center'>Join date " . $row["registerdate"]. "<b>";
+    echo "</p>";
+    echo "<p>";
+    echo "<b><a href='logout.php' align='center'>log out</a>";
     echo "</p>";
     
     $conn->close();

@@ -13,7 +13,7 @@
 </head>
 <body bgcolor="green">
 <div class="center-div">
-<form action="game.php" method="POST">
+<form action="main.php" method="POST">
     <h1>Please login in</h1>
     <p>If you don't have account message me here: yourmail@example.org</p>
     <p>  </p>
