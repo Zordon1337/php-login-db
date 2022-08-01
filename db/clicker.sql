@@ -40,7 +40,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `registerdate`) VALUES
 (0, 'unkown', '', '2012-07-06'),
-(0, 'unkown', '', '2012-07-06');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
